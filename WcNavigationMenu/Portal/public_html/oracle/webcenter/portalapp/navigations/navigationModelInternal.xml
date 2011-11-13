@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<navigationDefinition id="navigationModelInternal" visible="${true}"
+                      xmlns="http://xmlns.oracle.com/adf/rcs/catalog">
+  <contents xmlns="http://xmlns.oracle.com/adf/rcs/catalog">
+    <url factoryClass="oracle.webcenter.portalframework.sitestructure.rc.AdfPageResourceFactory"
+         visible="#{true}" id="url2"
+         url="page://oracle/webcenter/portalapp/pages/home.jspx">
+      <attributes>
+        <attribute attributeId="Title" isKey="false" value="Home"/>
+      </attributes>
+    </url>
+    <url factoryClass="oracle.webcenter.portalframework.sitestructure.rc.UrlResourceFactory"
+         id="url" visible="#{true}" url="http://otn.oracle.com">
+      <attributes>
+        <attribute value="OTN" isKey="false" attributeId="Title"/>
+      </attributes>
+    </url>
+  </contents>
+  <schema resourceBundle="oracle.adf.rc.attribute.nls.AttributeBundle"
+          xmlns="http://xmlns.oracle.com/adf/rcs/catalog">
+    <descriptor shortLabelKey="TITLE.SHORT_PROMPT_KEY" endUserVisible="true"
+                labelKey="TITLE.PROMPT_KEY" searchable="true" multivalue="false"
+                attributeId="Title"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="ACCESS_KEY.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="ACCESS_KEY.PROMPT_KEY"
+                searchable="true" multivalue="false" attributeId="AccessKey"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="DESCRIPTION.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="DESCRIPTION.PROMPT_KEY"
+                searchable="true" multivalue="false" attributeId="Description"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="ICON_URI.SHORT_PROMPT_KEY" endUserVisible="true"
+                labelKey="ICON_URI.PROMPT_KEY" searchable="true"
+                multivalue="false" attributeId="IconURI"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="SUBJECT.SHORT_PROMPT_KEY" endUserVisible="true"
+                labelKey="SUBJECT.PROMPT_KEY" searchable="true"
+                multivalue="true" attributeId="Subject"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="REDIRECT_FLAG.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="REDIRECT_FLAG.PROMPT_KEY"
+                searchable="true" multivalue="false" attributeId="Redirect"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="TARGET_FRAME.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="TARGET_FRAME.PROMPT_KEY"
+                searchable="true" multivalue="false" attributeId="Target"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="TOOL_TIP.SHORT_PROMPT_KEY" endUserVisible="true"
+                labelKey="TOOL_TIP.PROMPT_KEY" searchable="true"
+                multivalue="false" attributeId="ToolTip"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="MODIFIED.SHORT_PROMPT_KEY" endUserVisible="true"
+                labelKey="MODIFIED.PROMPT_KEY" searchable="true"
+                multivalue="false" attributeId="Modified"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="CHANGE_FREQUENCY.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="CHANGE_FREQUENCY.PROMPT_KEY"
+                searchable="true" multivalue="false"
+                attributeId="ChangeFrequency"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor shortLabelKey="SIGNIFICANCE.SHORT_PROMPT_KEY"
+                endUserVisible="true" labelKey="SIGNIFICANCE.PROMPT_KEY"
+                searchable="true" multivalue="false" attributeId="Significance"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+    <descriptor endUserVisible="true" shortLabelKey="EXTERNAL_ID"
+                labelKey="EXTERNAL_ID" searchable="true" multivalue="false"
+                attributeId="ExternalId"
+                resourceBundle="oracle.webcenter.navigationeditor.view.resource.NavigationEditorBundle"
+                xmlns="http://xmlns.oracle.com/adf/rcs/catalog"/>
+  </schema>
+</navigationDefinition>
