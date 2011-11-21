@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.55.36" id="DataBindings" SeparateXMLFiles="false"
+             Package="nl.whitehorses.webcenter.taskflows.view" ClientType="Generic">
+  <pageMap>
+    <page path="/first.jsff"
+          usageId="nl_whitehorses_webcenter_taskflows_view_firstPageDef"/>
+    <page path="/second.jsff"
+          usageId="nl_whitehorses_webcenter_taskflows_view_secondPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="nl_whitehorses_webcenter_taskflows_view_firstPageDef"
+          path="nl.whitehorses.webcenter.taskflows.view.pageDefs.firstPageDef"/>
+    <page id="nl_whitehorses_webcenter_taskflows_view_secondPageDef"
+          path="nl.whitehorses.webcenter.taskflows.view.pageDefs.secondPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="Events" path="nl.whitehorses.webcenter.taskflows.view.Events"/>
+  </dataControlUsages>
+</Application>

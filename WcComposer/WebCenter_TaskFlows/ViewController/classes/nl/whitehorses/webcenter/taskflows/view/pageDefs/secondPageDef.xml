@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.55.36" id="secondPageDef"
+                Package="nl.whitehorses.webcenter.taskflows.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="captureEvents_Return"
+                IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.captureEvents.result}"/>
+      <variable Type="java.lang.String" Name="captureComplexEvents_Return"
+                IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.captureComplexEvents.result}"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="captureEvents" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="captureEvents"
+                  IsViewObjectMethod="false" DataControl="Events"
+                  InstanceName="Events.dataProvider"
+                  ReturnName="Events.methodResults.captureEvents_Events_dataProvider_captureEvents_result">
+      <NamedData NDName="parameter" NDType="java.lang.String"
+                 NDValue="${bindings.captureEvents_parameter}"/>
+    </methodAction>
+    <methodAction id="captureComplexEvents" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="captureComplexEvents"
+                  IsViewObjectMethod="false" DataControl="Events"
+                  InstanceName="Events.dataProvider"
+                  ReturnName="Events.methodResults.captureComplexEvents_Events_dataProvider_captureComplexEvents_result">
+      <NamedData NDName="parameter" NDType="java.lang.Object"
+                 NDValue="${bindings.captureComplexEvents_parameter}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="Return">
+      <AttrNames>
+        <Item Value="captureEvents_Return"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Return1">
+      <AttrNames>
+        <Item Value="captureComplexEvents_Return"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

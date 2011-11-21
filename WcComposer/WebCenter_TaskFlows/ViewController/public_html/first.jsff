@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1">
+    <f:facet name="center">
+      <!-- id="af_one_column_stretched"   -->
+      <af:panelHeader text="First Bounded TF" id="ph1">
+        <af:panelFormLayout id="pfl1">
+          <f:facet name="footer">
+            <af:panelGroupLayout id="g1">
+              <af:commandButton actionListener="#{bindings.fireEvents.execute}"
+                                text="fireEvents"
+                                disabled="#{!bindings.fireEvents.enabled}"
+                                id="cb1"/>
+              <af:commandButton actionListener="#{bindings.fireComplexEvent.execute}"
+                                text="fireComplexEvent"
+                                disabled="#{!bindings.fireComplexEvent.enabled}"
+                                id="cb2"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <af:inputText label="TF input parameter1" id="it1"
+                        value="#{pageFlowScope.inputParameter1}"
+                        readOnly="true"/>
+          <af:inputText value="#{bindings.parameter.inputValue}"
+                        label="#{bindings.parameter.hints.label}"
+                        required="#{bindings.parameter.hints.mandatory}"
+                        columns="#{bindings.parameter.hints.displayWidth}"
+                        maximumLength="#{bindings.parameter.hints.precision}"
+                        shortDesc="#{bindings.parameter.hints.tooltip}"
+                        id="it2">
+            <f:validator binding="#{bindings.parameter.validator}"/>
+          </af:inputText>
+        </af:panelFormLayout>
+      </af:panelHeader>
+    </f:facet>
+  </af:panelStretchLayout>
+</jsp:root>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1">
+    <f:facet name="center">
+      <!-- id="af_one_column_stretched"   -->
+      <af:panelHeader text="Second Bounded TF" id="ph1">
+        <af:panelFormLayout id="pfl1">
+          <af:inputText value="#{bindings.Return.inputValue}"
+                        label="Simple Event"
+                        required="#{bindings.Return.hints.mandatory}"
+                        columns="#{bindings.Return.hints.displayWidth}"
+                        maximumLength="#{bindings.Return.hints.precision}"
+                        shortDesc="#{bindings.Return.hints.tooltip}" id="it1">
+            <f:validator binding="#{bindings.Return.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Return1.inputValue}"
+                        label="Complex Event"
+                        required="#{bindings.Return1.hints.mandatory}"
+                        columns="#{bindings.Return1.hints.displayWidth}"
+                        maximumLength="#{bindings.Return1.hints.precision}"
+                        shortDesc="#{bindings.Return1.hints.tooltip}" id="it2">
+            <f:validator binding="#{bindings.Return1.validator}"/>
+          </af:inputText>
+        </af:panelFormLayout>
+      </af:panelHeader>
+    </f:facet>
+  </af:panelStretchLayout>
+</jsp:root>

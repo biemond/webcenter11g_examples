@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="WEB-INF/SecondTF.xml" id="SecondTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" train="false"/>
+   <task-flow-descriptor path="WEB-INF/FirstTF.xml" id="FirstTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" train="false">
+      <input-parameter name="inputParameter1"/>
+   </task-flow-descriptor>
+</task-flow-registry>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.55.36" id="firstPageDef"
+                Package="nl.whitehorses.webcenter.taskflows.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="fireEvents_Return"
+                IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.fireEvents.result}"/>
+      <variable Type="java.lang.String" Name="fireEvents_parameter"
+                IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="fireEvents" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="fireEvents"
+                  IsViewObjectMethod="false" DataControl="Events"
+                  InstanceName="Events.dataProvider"
+                  ReturnName="Events.methodResults.fireEvents_Events_dataProvider_fireEvents_result">
+      <NamedData NDName="parameter" NDType="java.lang.String"
+                 NDValue="${bindings.fireEvents_parameter}"/>
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="simpleEvent" eventType="Action Event"/>
+      </events>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="parameter">
+      <AttrNames>
+        <Item Value="fireEvents_parameter"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="fireComplexEvent" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="fireComplexEvent"
+                  IsViewObjectMethod="false" DataControl="Events"
+                  InstanceName="Events.dataProvider"
+                  ReturnName="Events.methodResults.fireComplexEvent_Events_dataProvider_fireComplexEvent_result">
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="complexEvent" eventType="Action Event"/>
+      </events>
+    </methodAction>
+  </bindings>
+  <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="simpleEvent" eventType="Action Event"/>
+    <event name="complexEvent" eventType="Action Event"/>
+  </events>
+</pageDefinition>

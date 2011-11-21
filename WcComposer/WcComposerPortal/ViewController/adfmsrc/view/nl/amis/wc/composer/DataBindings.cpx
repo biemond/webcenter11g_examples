@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.59.23" id="DataBindings" SeparateXMLFiles="false"
+             Package="view.nl.amis.wc.composer" ClientType="Generic"
+             PageMapClass="oracle.jbo.uicli.mom.DynamicPageMapImpl"
+             BasePageDefPackageName="pageDefs">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/composer.jspx"
+          usageId="view_nl_amis_wc_composer_composerPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_nl_amis_wc_composer_composerPageDef"
+          path="nl.amis.wc.composer.view.pageDefs.composerPageDef"/>
+  </pageDefinitionUsages>
+</Application>

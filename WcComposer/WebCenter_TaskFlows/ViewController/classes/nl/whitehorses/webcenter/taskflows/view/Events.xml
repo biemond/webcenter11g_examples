@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.55.36"
+          id="Events" Package="nl.whitehorses.webcenter.taskflows.view"
+          BeanClass="nl.whitehorses.webcenter.taskflows.view.Events"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="fireEvents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="parameter" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Map" id="fireComplexEvent"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String, java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="captureEvents" ReturnNodeName="Return">
+    <ParameterInfo id="parameter" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="captureComplexEvents" ReturnNodeName="Return">
+    <ParameterInfo id="parameter" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="nl.whitehorses.webcenter.taskflows.view.Events"
+                     BeanClass="nl.whitehorses.webcenter.taskflows.view.Events"
+                     id="Events"/>
+</JavaBean>
